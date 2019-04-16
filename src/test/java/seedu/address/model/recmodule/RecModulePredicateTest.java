@@ -167,7 +167,7 @@ public class RecModulePredicateTest {
     @Test
     public void test_facModule() {
         GradTrak gt = new GradTrakBuilder()
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("PC1144").build()).build();
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("PC1144").build()).build();
 
         RecModulePredicate rmp1 = new RecModulePredicate(algoCourse, gt);
         RecModulePredicate rmp2 = new RecModulePredicate(algoCourse, emptyGradTrak);
@@ -186,30 +186,30 @@ public class RecModulePredicateTest {
     @Test
     public void test_ieModule() {
         GradTrak gt1 = new GradTrakBuilder()
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CP3880").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build()).build();
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CP3880").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build()).build();
         GradTrak gt2 = new GradTrakBuilder()
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS4010").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build()).build();
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS4010").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build()).build();
         GradTrak gt3 = new GradTrakBuilder()
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CP3200").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CP3202").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build()).build();
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CP3200").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CP3202").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build()).build();
         GradTrak gt4 = new GradTrakBuilder()
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CP3200").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build())
-                .withPerson(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build()).build();
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CP3200").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2101").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS3103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("IS2103").build())
+                .withModuleTaken(new ModuleTakenBuilder().withModuleInfoCode("CS2103T").build()).build();
 
         RecModule cp3880 = rmb.create("CP3880");
         RecModule is4010 = rmb.create("IS4010");

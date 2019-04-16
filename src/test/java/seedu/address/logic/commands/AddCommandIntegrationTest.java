@@ -48,7 +48,7 @@ public class AddCommandIntegrationTest {
     public void execute_duplicatePerson_throwsCommandException() {
         ModuleTaken moduleTakenInList = model.getGradTrak().getModulesTakenList().get(0);
         assertCommandFailure(new AddCommand(moduleTakenInList), model, commandHistory,
-                AddCommand.MESSAGE_DUPLICATE_PERSON);
+                AddCommand.MESSAGE_DUPLICATE_MODULE_TAKEN);
     }
 
 }

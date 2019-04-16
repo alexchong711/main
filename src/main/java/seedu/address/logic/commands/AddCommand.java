@@ -40,7 +40,7 @@ public class AddCommand extends Command {
             + PREFIX_TAG + "OOP";
 
     public static final String MESSAGE_SUCCESS = "New moduleTaken added: %1$s";
-    public static final String MESSAGE_DUPLICATE_PERSON = "This moduleTaken already exists in the address book";
+    public static final String MESSAGE_DUPLICATE_MODULE_TAKEN = "This moduleTaken already exists in the address book";
     public static final String MESSAGE_PREREQ_MISSING = "Prerequisites not satisfied";
 
     private final ModuleTaken toAdd;
@@ -68,7 +68,7 @@ public class AddCommand extends Command {
         }
 
         if (model.hasModuleTaken(toAdd)) {
-            throw new CommandException(MESSAGE_DUPLICATE_PERSON);
+            throw new CommandException(MESSAGE_DUPLICATE_MODULE_TAKEN);
         }
 
         if (!model.isEligibleModuleTaken(toAdd)) {

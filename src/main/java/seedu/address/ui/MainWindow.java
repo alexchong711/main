@@ -115,11 +115,12 @@ public class MainWindow extends UiPart<Stage> {
      * Fills up all the placeholders of this window.
      */
     void fillInnerParts() {
-        commandPanel = new BrowserPanel(logic.selectedPersonProperty());
+        commandPanel = new BrowserPanel(logic.selectedClassForPrintingProperty());
         browserPlaceholder.getChildren().add(commandPanel.getRoot());
 
-        moduleTakenListPanel = new ModuleTakenListPanel(logic.getFilteredPersonList(), logic.selectedPersonProperty(),
-                logic::setSelectedPerson);
+        moduleTakenListPanel = new ModuleTakenListPanel(
+                logic.getFilteredModuleTakenList(), logic.selectedClassForPrintingProperty(),
+                logic::setSelectedClassForPrinting);
         personListPanelPlaceholder.getChildren().add(moduleTakenListPanel.getRoot());
 
         resultDisplay = new ResultDisplay();
