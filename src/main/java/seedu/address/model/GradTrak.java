@@ -129,7 +129,7 @@ public class GradTrak implements ReadOnlyGradTrak {
      * {@code ModuleTaken} must not contain duplicate modulesTaken.
      */
     public void setModulesTaken(List<ModuleTaken> modulesTaken) {
-        this.modulesTaken.setPersons(modulesTaken);
+        this.modulesTaken.setModulesTaken(modulesTaken);
         indicateModified();
     }
 
@@ -180,7 +180,7 @@ public class GradTrak implements ReadOnlyGradTrak {
     public void setModuleTaken(ModuleTaken target, ModuleTaken editedModuleTaken) {
         requireNonNull(editedModuleTaken);
 
-        modulesTaken.setPerson(target, editedModuleTaken);
+        modulesTaken.setModuleTaken(target, editedModuleTaken);
         indicateModified();
     }
 

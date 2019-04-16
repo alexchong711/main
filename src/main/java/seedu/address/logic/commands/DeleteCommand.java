@@ -19,11 +19,12 @@ public class DeleteCommand extends Command {
     public static final String COMMAND_WORD = "delete";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD
-            + ": Deletes the moduleTaken identified by the index number used in the displayed moduleTaken list.\n"
+            + ": Deletes the moduleTaken identified by the "
+            + "index number used in the displayed list of modules in plan.\n"
             + "Parameters: INDEX (must be a positive integer)\n"
             + "Example: " + COMMAND_WORD + " 1";
 
-    public static final String MESSAGE_DELETE_PERSON_SUCCESS = "Deleted ModuleTaken: %1$s";
+    public static final String MESSAGE_DELETE_MODULE_TAKEN_SUCCESS = "Deleted module from plan: %1$s";
 
     private final Index targetIndex;
 
@@ -47,7 +48,7 @@ public class DeleteCommand extends Command {
             throw new CommandException(Messages.MESSAGE_PREREQUISITE_VIOLATED);
         }
         model.commitGradTrak();
-        return new CommandResult(String.format(MESSAGE_DELETE_PERSON_SUCCESS, moduleTakenToDelete));
+        return new CommandResult(String.format(MESSAGE_DELETE_MODULE_TAKEN_SUCCESS, moduleTakenToDelete));
     }
 
     @Override
